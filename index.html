@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Cloud Engineer Portfolio</title>
+
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: white;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(10px);
+}
+
+nav h2 {
+  color: #00d4ff;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #00d4ff;
+}
+
+/* HERO */
+.hero {
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.hero-text h1 {
+  font-size: 50px;
+}
+
+.hero-text span {
+  color: #00d4ff;
+}
+
+.hero button {
+  padding: 12px 25px;
+  margin-top: 20px;
+  border: none;
+  background: #00d4ff;
+  color: black;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.hero img {
+  width: 400px;
+}
+
+/* SECTIONS */
+section {
+  padding: 60px 50px;
+}
+
+/* ABOUT */
+.about {
+  background: rgba(255,255,255,0.05);
+  border-radius: 10px;
+}
+
+/* SKILLS */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.skill {
+  padding: 10px 20px;
+  background: #00d4ff;
+  color: black;
+  border-radius: 20px;
+}
+
+/* PROJECTS */
+.projects {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
+  gap: 20px;
+}
+
+.card {
+  background: rgba(255,255,255,0.1);
+  padding: 20px;
+  border-radius: 10px;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background: rgba(0,212,255,0.2);
+}
+
+/* RESUME */
+.resume a {
+  display: inline-block;
+  padding: 12px 20px;
+  background: #00d4ff;
+  color: black;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+/* CONTACT */
+.contact input, .contact textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: none;
+  border-radius: 5px;
+}
+
+.contact button {
+  padding: 10px 20px;
+  border: none;
+  background: #00d4ff;
+  color: black;
+  cursor: pointer;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background: black;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <h2>CloudPortfolio</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#resume">Resume</a>
+    <a href="#contact">Contact</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-text">
+    <h1>Hi, I'm <span>Your Name</span></h1>
+    <h3>Cloud Engineer ☁️</h3>
+    <p>AWS | Azure | DevOps | Kubernetes</p>
+    <button onclick="scrollToSection()">Explore</button>
+  </div>
+  <img src="https://cdn-icons-png.flaticon.com/512/4144/4144783.png">
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="about">
+  <h2>About Me</h2>
+  <p>I am a passionate Cloud Engineer specializing in cloud infrastructure, automation, and scalable system design. I work with AWS, Docker, Kubernetes, and CI/CD pipelines.</p>
+</section>
+
+<!-- SKILLS -->
+<section>
+  <h2>Skills</h2>
+  <div class="skills">
+    <div class="skill">AWS</div>
+    <div class="skill">Azure</div>
+    <div class="skill">Docker</div>
+    <div class="skill">Kubernetes</div>
+    <div class="skill">Terraform</div>
+    <div class="skill">CI/CD</div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects">
+  <h2>Projects</h2>
+  <div class="projects">
+    <div class="card">
+      <h3>Cloud Deployment</h3>
+      <p>Deployed scalable web app using AWS EC2, S3, and Load Balancer.</p>
+    </div>
+    <div class="card">
+      <h3>Kubernetes Cluster</h3>
+      <p>Built and managed Kubernetes cluster with auto-scaling.</p>
+    </div>
+    <div class="card">
+      <h3>CI/CD Pipeline</h3>
+      <p>Automated deployment using Jenkins & Docker.</p>
+    </div>
+  </div>
+</section>
+
+<!-- RESUME -->
+<section id="resume" class="resume">
+  <h2>Resume</h2>
+  <a href="resume.pdf" download>Download Resume</a>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h2>Contact Me</h2>
+  <input type="text" placeholder="Your Name">
+  <input type="email" placeholder="Your Email">
+  <textarea placeholder="Message"></textarea>
+  <button>Send</button>
+</section>
+
+<footer>
+  <p>© 2026 Cloud Engineer sanjay Portfolio</p>
+</footer>
+
+<script>
+function scrollToSection() {
+  document.getElementById("about").scrollIntoView({behavior: "smooth"});
+}
+</script>
+
+</body>
+</html>
